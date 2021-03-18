@@ -9,24 +9,26 @@ import {
 
 export const Navigator = () => {
     return (
-        <div>
-            <ul>
-                <li><Link to="/hi">hi</Link></li>
-                <li><Link to="/bye">bye</Link></li>
-            </ul>
+        <Router>
+            <div>
+                <ul>
+                    <li><Link to="/hi">hi</Link></li>
+                    <li><Link to="/bye">bye</Link></li>
+                </ul>
 
-            <Switch>
-                <Route exact path="/">
+                <Switch>
+                    <Route exact path="/">
 
-                </Route>
-                <Route exact path="/hi">
-                    
-                </Route>
-                <Route exact path="/bye">
-                    
-                </Route>
-            </Switch>
+                    </Route>
+                    <Route exact path="/hi">
+                        
+                    </Route>
+                    <Route exact path="/bye">
+                        
+                    </Route>
+                </Switch>
 
-        </div>
+            </div>
+        </Router>
     )
 }
