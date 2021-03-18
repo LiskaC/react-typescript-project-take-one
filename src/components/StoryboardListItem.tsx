@@ -1,10 +1,6 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
-    Route,
     Link,
-    RouteComponentProps,
-    Switch
 } from 'react-router-dom';
 
 interface StoryboardItemProps {
