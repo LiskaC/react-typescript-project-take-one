@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    RouteComponentProps,
+    Switch
+} from 'react-router-dom';
 
 interface StoryboardItemProps {
     story?: string;
@@ -7,7 +14,9 @@ interface StoryboardItemProps {
 export const StoryboardListItem = ({story}: StoryboardItemProps) => {
     return (
         <div>
-            <h1>{story || "This is the Storyboard list item"}</h1>
+            <Link to={`/${story}`}>
+                <h1>{story || "This is the Storyboard list item"}</h1>
+            </Link>
         </div>
     )
 }
