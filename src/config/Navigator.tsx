@@ -1,31 +1,30 @@
-import React from 'react';
+import * as React from "react";
 import {
     BrowserRouter as Router,
     Route,
-    Link,
-    RouteComponentProps,
     Switch
 } from 'react-router-dom';
 
-export const Navigator = () => {
+
+interface NavigatorProps {
+    childComp?: React.ReactNode;
+  }
+
+export const Navigator: React.FC<NavigatorProps> = ({ childComp }) => {
     return (
         <Router>
             <div>
-
-                {/*TODO - move the unordered list somewhere else, this should just be the router*/}
-                <ul>
-                    <li><Link to="/hi">hi</Link></li>
-                    <li><Link to="/bye">bye</Link></li>
-                </ul>
+                {/*TODO - how do I create dynamic routes for my dynamic links?*/}
+                <div>{childComp}</div>
 
                 <Switch>
                     <Route exact path="/">
 
                     </Route>
-                    <Route exact path="/hi">
+                    <Route path="/hi">
                         
                     </Route>
-                    <Route exact path="/bye">
+                    <Route path="/bye">
                         
                     </Route>
                 </Switch>
